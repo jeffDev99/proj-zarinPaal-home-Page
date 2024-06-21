@@ -1,0 +1,823 @@
+/* normalise */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "iranyekanweb", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+/* begin */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1170px;
+  margin: auto;
+  padding: 21px 0 7px;
+  background-color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  transform: all 0.3s ease;
+}
+.header__logo {
+  margin: 11px 28px;
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.menu-list__item {
+  font-size: 14px;
+  margin: 0 15px;
+}
+.menu-list__link {
+  text-decoration: none;
+  color: #ccc;
+}
+.menu-list > .menu-list__item:last-child a {
+  color: #28457b;
+  background-color: rgba(232, 239, 254, 0.6);
+  border-radius: 20px;
+  padding: 10px 27px;
+  margin-right: 20px;
+  font-family: "YekanBakh";
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.menu-list > .menu-list__item:last-child a:hover {
+  background-color: #fbf6d9;
+}
+.more-menu {
+  display: flex;
+  align-items: center;
+}
+.menu-list__icon {
+  width: 8px;
+  margin-right: 8px;
+}
+.hamburger-icon {
+  width: 27px;
+  margin-left: 30px;
+  display: none;
+}
+.hamburger-menu {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  font-family: "YekanBakh";
+  font-weight: 700;
+  text-align: left;
+  padding: 25px 0;
+  z-index: 10;
+  font-weight: 800;
+  transform: translateY(-100%);
+}
+.show-hamburger-menu {
+  animation: fadeInDown 0.25s forwards;
+}
+.cross-icon {
+  margin-left: 1.5rem;
+}
+
+.hamburger-menu-list {
+  padding: 10px 30px;
+  list-style: none;
+  text-align: right;
+}
+.hamburger-menu-list__link {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 5px 0;
+}
+.divider {
+  height: 1px;
+  background-color: #dfe1e4;
+  width: 90%;
+  margin: 8px 0;
+}
+.hamburger-menu-list__item--more {
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: #28457b;
+  background-color: #eee;
+}
+
+.hamburger-menu-list__item--more img {
+  width: 15px;
+  margin-right: 5px;
+}
+#showMoreMenu,
+#showProductMenu {
+  position: relative;
+}
+#showMoreMenu ul {
+  position: absolute;
+  top: 0;
+  left: -70%;
+  background-color: #fff;
+  border-top: 5px solid #f8d88b;
+  border-radius: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  list-style: none;
+  width: 123px;
+  display: none;
+}
+#showMoreMenu .product-menu a {
+  margin: 0;
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  color: #000;
+  text-decoration: none;
+}
+
+#showMoreMenu .product-menu a:hover {
+  background-color: rgba(232, 239, 254, 0.6);
+}
+#showProductMenu ul {
+  position: absolute;
+  top: 0;
+  left: -70px;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  width: 372px;
+  border-top: 5px solid #f8d88b;
+  border-radius: 12px;
+  padding-top: 20px;
+  margin-top: 20px;
+  list-style: none;
+  display: none;
+}
+#showProductMenu .product-menu a {
+  margin: 0;
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  color: #000;
+  text-decoration: none;
+}
+#showProductMenu .product-menu a p:first-child {
+  color: #000;
+  font-size: 0.95rem;
+}
+#showProductMenu .product-menu a p:last-child {
+  color: #000;
+  font-size: 0.7rem;
+}
+.product-menu {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+/* end header */
+
+/* begin banner */
+.banner {
+  width: 1050px;
+  padding: 124px 60px 80px;
+  background-image: linear-gradient(135deg, #21254e, #2e4a83);
+  border-radius: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.banner-text {
+  color: #fff;
+}
+.banner-text__title {
+  font-family: "YekanBakh";
+  font-size: 2rem;
+  font-weight: 900;
+}
+.banner-text__para {
+  font-family: "YekanBakh";
+  font-size: 1.15rem;
+  margin: 25px 0;
+  line-height: 2.5rem;
+}
+.banner-text__btn-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+.banner-text__reg {
+  font-size: 1rem;
+  font-family: "YekanBakh";
+  color: #000;
+  background-color: #ffd900;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.banner-text__login {
+  font-size: 1rem;
+  font-family: "YekanBakh";
+  color: #fff;
+  background-color: #435a8a;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.banner-img__img {
+  width: 500px;
+  display: block;
+}
+.banner__go-down {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 58px;
+}
+.banner__go-down::before {
+  content: " ";
+  background-image: url("../images/arrowbottom.svg");
+  width: 164px;
+  height: 78px;
+}
+.banner__go-down-img {
+  width: 15px;
+  position: relative;
+  top: -60px;
+}
+
+/* online-payment */
+.online-payment {
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.online-payment__img {
+  width: 450px;
+  height: 480px;
+}
+.online-payment__left {
+  margin: 30px 0;
+  width: 530px;
+}
+.online-payment__title {
+  color: #747480;
+  font-family: "YekanBakh";
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 20px 0 5px;
+}
+.online-payment__subtitle {
+  color: #303030;
+  font-family: "YekanBakh";
+  font-weight: 800;
+  font-size: 2rem;
+  margin: 5px 0 10px;
+}
+.online-payment__text {
+  color: #303030;
+  font-family: "YekanBakh";
+  font-weight: 700;
+  text-align: justify;
+  line-height: 40px;
+  border-bottom: 1px solid #dfe1e4;
+  padding-bottom: 20px;
+  margin-top: 16px;
+}
+.online-payment__btns {
+  margin-top: 40px;
+  display: flex;
+}
+.online-payment__btn-yellow {
+  font-size: 0.9rem;
+  font-family: "iranyekanweb";
+  font-weight: 700;
+  color: #000;
+  background-color: #ffd900;
+  padding: 6px 14px;
+  border-radius: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.online-payment__btn-secoundary {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-family: "iranyekanweb";
+  font-weight: 700;
+  color: #28457b;
+  background-color: rgba(232, 239, 254, 0.7);
+  padding: 6px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.online-payment__icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+/* zarin-link */
+.zarin-link {
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+/* attributes */
+.attributes {
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.attributes-definition {
+  width: 35%;
+  margin-top: 50px;
+}
+.attributes-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;
+  padding: 30px;
+}
+.attributes-item {
+  padding: 18px 25px 20px 0;
+}
+.attributes-item__img {
+  width: 60px;
+  height: 60px;
+}
+.attributes-item__header {
+  display: flex;
+  align-items: center;
+}
+.attributes-item__title {
+  font-size: 1.5rem;
+  font-family: "YekanBakh";
+  font-weight: 900;
+  margin-right: 20px;
+}
+.attributes-item__text {
+  margin: 20px 0 20px 10px;
+  font-size: 1rem;
+  font-family: "YekanBakh";
+  font-weight: 700;
+  color: #303030;
+  line-height: 36px;
+}
+.attributes-definition__title {
+  font-family: "YekanBakh";
+  font-weight: 900;
+  font-size: 2rem;
+}
+.attributes-definition__text {
+  width: 85%;
+  margin-top: 40px;
+  line-height: 40px;
+  font-size: 1rem;
+}
+.attributes-first-item {
+  border-left: 1px solid #e0e4e7;
+}
+.attributes-second-item {
+  border-bottom: 1px solid #e0e4e7;
+}
+.attributes-third-item {
+  border-top: 1px solid #e0e4e7;
+}
+.attributes-fourth-item {
+  border-right: 1px solid #e0e4e7;
+}
+
+/* start box */
+.start-box {
+  width: 1170px;
+  height: 220px;
+  margin: auto;
+  margin-top: 50px;
+  border: 1px solid silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.start-box__title {
+  font-family: "YekanBakh";
+  font-weight: 800;
+  font-size: 1.7rem;
+}
+.start-box__text {
+  font-family: "YekanBakh";
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #747480;
+  margin-top: 10px;
+}
+.start-box__link {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-family: "iranyekanweb";
+  font-weight: 700;
+  font-size: 0.9rem;
+  min-height: 28px;
+  line-height: 28px;
+  padding: 4px 14px;
+  background-color: #ffd900;
+  color: #000;
+  border-radius: 10px;
+}
+/* support */
+.support {
+  width: 1110px;
+  height: 70px;
+  padding: 0 30px;
+  margin: 50px auto;
+  background-color: #fbf6f1;
+  border-radius: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.support-number {
+  font-family: "YekanBakh";
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.support-number__line {
+  margin: 0 15px;
+}
+.support-number__link {
+  color: #21254e;
+}
+.support-request {
+  display: flex;
+  color: #21254e;
+  font-family: "YekanBakh";
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.support-request__img {
+  width: 20px;
+  margin-right: 10px;
+}
+/* footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
+  margin: auto;
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: calc(100% - 330px);
+  margin-bottom: 50px;
+  padding: 0 10px;
+}
+.social-media {
+  width: 330px;
+  padding: 0 30px;
+  margin-bottom: 100px;
+}
+.social-media__text {
+  font-family: "YekanBakh";
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: #303030;
+}
+.social-media-list {
+  display: flex;
+  margin-top: 20px;
+}
+.social-media-list__link {
+  background-color: #eff4fe;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+.footer-links-item__title {
+  font-size: 1.3rem;
+  font-family: "YekanBakh";
+  font-weight: 900;
+  margin-bottom: 15px;
+  color: #303030;
+}
+.footer-links__list {
+  list-style: none;
+}
+.footer-links__list-link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "iranyekanweb";
+  font-weight: 700;
+  color: #000;
+  display: block;
+  padding: 8px 0;
+}
+.bell{
+    background-color: #2e82ff;
+    width: fit-content;
+    padding: 7px 7px 0;
+    border-radius: 100%;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+}
+.bell__img{
+    width: 40px;
+    height: 40px;
+}
+/* animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*  responsive (desktop first) */
+@media screen and (max-width: 1200px) {
+  .header {
+    width: 940px;
+  }
+  .banner {
+    width: 900px;
+    padding: 60px 40px 120px;
+  }
+  .banner-img__img {
+    width: 430px;
+  }
+  .online-payment {
+    width: 940px;
+  }
+  .attributes {
+    width: 924px;
+    padding: 0 8px;
+    flex-direction: column;
+  }
+  .attributes-definition {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .attributes-definition__text {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .attributes-items {
+    width: 90%;
+    padding: 30px;
+  }
+  .attributes-item {
+    padding: 18px 0 20px 50px;
+  }
+  .attributes-first-item,
+  .attributes-second-item,
+  .attributes-third-item,
+  .attributes-fourth-item {
+    border: none;
+  }
+  .start-box {
+    width: 940px;
+  }
+  .support {
+    width: 880px;
+  }
+  .footer {
+    width: 940px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .header {
+    width: auto;
+    padding: 20px 60px;
+  }
+  .menu-list > .menu-list__item:last-child a {
+    display: none;
+  }
+  .header__logo {
+    margin: 0;
+  }
+  .banner {
+    width: auto;
+    padding: 40px 40px 85px;
+    margin: 0 35px;
+  }
+  .banner-img__img {
+    display: none;
+  }
+  .banner-text {
+    text-align: center;
+  }
+  .banner-text__para {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  .banner-text__btn-wrapper {
+    margin-top: 40px;
+  }
+  .banner__go-down{
+    bottom: 39px;
+  }
+  .online-payment,
+  .zarin-link {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-text {
+    width: 95%;
+  }
+  .attributes {
+    width: auto;
+    padding: 0 35px;
+  }
+  .start-box {
+    margin: 0 38px;
+    width: calc(100% - 76px);
+  }
+  .support {
+    width: calc(100% - 120px);
+  }
+  .support-number,
+  .support-request {
+    font-size: 1.2rem;
+  }
+  .footer {
+    flex-direction: column;
+    width: calc(100% - 60px);
+  }
+  .footer-links {
+    width: 100%;
+  }
+  .social-media {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-list.menu-list {
+    display: none;
+  }
+  .header {
+    width: auto;
+    padding: 10px 8px;
+  }
+  .hamburger-icon {
+    display: block;
+  }
+  .banner {
+    margin: auto 8px;
+  }
+  .section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .online-payment__img {
+    width: 460px;
+    height: 480px;
+  }
+  .attributes-definition {
+    text-align: center;
+    margin-top: 90px;
+  }
+  .attributes-definition__title {
+    font-size: 1.6rem;
+  }
+  .attributes-items {
+    width: 100%;
+    padding: 50px 0;
+  }
+  .attributes-item {
+    padding: 18px 0 20px 20px;
+  }
+  .start-box {
+    margin: 0 8px;
+    width: calc(100% - 16px);
+  }
+  .support {
+    flex-direction: column;
+    align-items: flex-start;
+    background: none;
+  }
+  .support-request {
+    background-color: #fbf6f1;
+    padding: 5px 20px;
+    border-radius: 35px;
+    margin-top: 20px;
+  }
+  .footer{
+    width: calc(100% - 120px);
+    margin: 0 60px;
+  }
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-links div {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .banner {
+    padding: 80px 40px;
+  }
+  .banner-text__title {
+    font-size: 1.2rem;
+    text-align: right;
+  }
+  .banner-text__para {
+    text-align: justify;
+  }
+  .online-payment,
+  .zarin-link {
+    padding: 0 8px;
+  }
+  .online-payment__img {
+    display: none;
+  }
+  .online-payment__left {
+    width: 100%;
+  }
+  .section-text {
+    width: 80%;
+    padding: 0 10px;
+  }
+  .online-payment__subtitle {
+    font-size: 1.5rem;
+  }
+  .attributes-items {
+    padding: 50px 0;
+    grid-template-columns: 1fr;
+  }
+  .attributes-item {
+    padding: 18px 0;
+  }
+
+  .start-box {
+    height: 180px;
+  }
+
+  .start-box h4 {
+    font-size: 1.2rem;
+  }
+
+  .start-box p {
+    font-size: 1rem;
+  }
+  .support {
+    width: calc(100% - 60px);
+    padding: 0;
+    margin: 50px 30px;
+  }
+  .support-number,
+  .support-request {
+    font-size: 0.95rem;
+  }
+  .footer{
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
+  .footer-links-item__title , .footer-links__list-link{
+    font-size: .9rem;
+  }
+}
